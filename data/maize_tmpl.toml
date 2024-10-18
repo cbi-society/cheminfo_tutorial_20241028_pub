@@ -1,0 +1,15 @@
+[vina]
+# maize環境のPythonのPath, Vinaのインストールパスを指定して下さい
+# example
+#python = "/home/iwatobipen/miniforge3/envs/maize/bin/python"
+#commands.vina = "/opt/vina/bin/vina"
+python = {put your environment here!}
+commands.vina = {put your environment here!}
+
+[gypsum]
+# gypsum environmentのインストールPath、実行用のスクリプトのPathを指定して下さい
+# example
+#scripts.gypsum.interpreter = "/home/iwatobipen/miniforge3/envs/gypsum/bin/python"
+#scripts.gypsum.location = "/home/iwatobipen/dev/gypsum_dl/run_gypsum_dl.py"
+scripts.gypsum.interpreter = "{put your environment here!}"
+scripts.gypsum.location = "{put your environment here!}"

@@ -1,0 +1,64 @@
+CRYST1  142.929  142.929  142.929  90.00  90.00  90.00 I 2 3         2
+HETATM    1  CAA IRE A2020     -51.165   2.487 -16.195  1.00 87.35           C  
+HETATM    2  CAD IRE A2020     -51.189  -0.585 -26.674  1.00 89.45           C  
+HETATM    3  CAE IRE A2020     -51.103  -0.682 -25.280  1.00 89.23           C  
+HETATM    4  CAG IRE A2020     -50.925   1.714 -25.133  1.00 89.22           C  
+HETATM    5  CAH IRE A2020     -52.195   1.859 -18.839  1.00 89.36           C  
+HETATM    6  CAI IRE A2020     -50.399   0.437 -20.394  1.00 89.07           C  
+HETATM    7  CAJ IRE A2020     -48.276  -2.469 -17.821  1.00105.09           C  
+HETATM    8  CAK IRE A2020     -48.831  -1.483 -18.875  1.00100.10           C  
+HETATM    9  CAL IRE A2020     -44.406  -3.592 -15.075  1.00116.13           C  
+HETATM   10  CAM IRE A2020     -44.075  -4.866 -17.134  1.00115.82           C  
+HETATM   11  CAN IRE A2020     -46.751  -2.319 -17.717  1.00110.45           C  
+HETATM   12  CAO IRE A2020     -45.480  -2.716 -15.745  1.00115.20           C  
+HETATM   13  CAP IRE A2020     -45.255  -4.173 -17.846  1.00114.72           C  
+HETATM   14  CAW IRE A2020     -51.141   0.667 -27.293  1.00 89.10           C  
+HETATM   15  CAX IRE A2020     -51.007   1.806 -26.512  1.00 89.05           C  
+HETATM   16  CAY IRE A2020     -50.978   0.472 -24.509  1.00 89.06           C  
+HETATM   17  CAZ IRE A2020     -51.131   1.201 -18.216  1.00 89.40           C  
+HETATM   18  NAS IRE A2020     -50.876   0.406 -23.183  1.00 89.31           N  
+HETATM   19  OAT IRE A2020     -50.948   1.228 -16.851  1.00 89.12           O  
+HETATM   20  OAU IRE A2020     -43.457  -4.022 -16.108  1.00117.18           O  
+HETATM   21  OAV IRE A2020     -49.194  -0.154 -18.361  1.00 91.27           O  
+HETATM   22  CBA IRE A2020     -50.235   0.478 -19.000  1.00 90.01           C  
+HETATM   23  NBE IRE A2020     -46.131  -3.393 -16.914  1.00114.00           N  
+HETATM   24 CL   IRE A2020     -50.943   3.360 -27.240  1.00 89.85          CL  
+HETATM   25  N1  IRE A2020     -52.731   1.745 -22.905  1.00 89.38           N  
+HETATM   26  C2  IRE A2020     -53.559   2.411 -22.131  1.00 89.47           C  
+HETATM   27  N3  IRE A2020     -53.370   2.446 -20.819  1.00 89.95           N  
+HETATM   28  C4  IRE A2020     -52.352   1.807 -20.222  1.00 89.32           C  
+HETATM   29  C5  IRE A2020     -51.458   1.101 -21.003  1.00 88.61           C  
+HETATM   30  C6  IRE A2020     -51.681   1.085 -22.378  1.00 89.23           C  
+HETATM   31  FAB IRE A2020     -51.218   0.793 -28.634  1.00 88.75           F  
+CONECT    1   19
+CONECT    2    3   14
+CONECT    3    2   16
+CONECT    4   15   16
+CONECT    5   28   17
+CONECT    6   29   22
+CONECT    7    8   11
+CONECT    8    7   21
+CONECT    9   20   12
+CONECT   10   13   20
+CONECT   11    7   23
+CONECT   12    9   23
+CONECT   13   10   23
+CONECT   14    2   31   15
+CONECT   15    4   14   24
+CONECT   16    3    4   18
+CONECT   17    5   19   22
+CONECT   18   16   30
+CONECT   19   17    1
+CONECT   20    9   10
+CONECT   21    8   22
+CONECT   22   21    6   17
+CONECT   23   12   13   11
+CONECT   24   15
+CONECT   25   30   26
+CONECT   26   25   27
+CONECT   27   26   28
+CONECT   28    5   27   29
+CONECT   29    6   28   30
+CONECT   30   25   29   18
+CONECT   31   14
+END
