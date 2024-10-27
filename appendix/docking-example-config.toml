@@ -1,0 +1,25 @@
+
+[vina]
+python = "/home/iwatobipen/miniforge3/envs/maize-dev/bin/python"
+commands.vina = "/opt/vina/bin/vina"
+
+[gypsum]
+scripts.gypsum.interpreter = "/home/iwatobipen/miniforge3/envs/gypsum/bin/python"
+scripts.gypsum.location = "/home/iwatobipen/dev/gypsum_dl/run_gypsum_dl.py"
+
+[reinvent]
+scripts.reinvent.interpreter = "/home/iwatobipen/miniforge3/envs/reinvent4/bin/python"
+scripts.reinvent.location = "/home/iwatobipen/miniforge3/envs/reinvent4/bin/reinvent"
+
+#[autodockgpu]
+#python = "/projects/mai/users/${USER}_thomas/opt/miniconda3/envs/maize-dev/bin/python"
+#modules = ["CUDA", "GCC"]
+#commands.autodock_gpu = "/projects/mai/users/${USER}_thomas/src/AutoDock-GPU/bin/autodock_gpu_64wi" 
+
+#[gypsum]
+#scripts.gypsum.interpreter = "/projects/mai/users/${USER}_thomas/opt/mambaforge/envs/gypsum/bin/python"
+#scripts.gypsum.location = "/projects/mai/users/${USER}_thomas/src/gypsum_dl/run_gypsum_dl.py"
+
+#[reinvent]
+#scripts.reinvent.interpreter = "/projects/mai/users/${USER}_thomas/opt/mambaforge/envs/reinvent4/bin/python"
+#scripts.reinvent.location = "/projects/mai/users/${USER}_thomas/opt/mambaforge/envs/reinvent4/bin/reinvent"

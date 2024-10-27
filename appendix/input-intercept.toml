@@ -1,0 +1,76 @@
+# A single stage RL run
+
+run_type = "staged_learning"
+use_cuda = true
+tb_logdir = "tb_logs_RL"
+json_out_config = "_RL.json"
+
+[parameters]
+summary_csv_prefix = "RL"
+use_checkpoint = false
+purge_memories = false
+
+prior_file = "reinvent.prior"
+agent_file = "reinvent.prior"
+
+batch_size = 8
+#unique_molecules = true
+#randomize_smiles = true
+
+[learning_strategy]
+type = "dap"
+sigma = 128
+rate = 0.0001
+
+[diversity_filter]
+type = "IdenticalMurckoScaffold"
+bucket_size = 25
+minscore = 0.4
+minsimilarity = 0.4
+penalty_multiplier = 0.5
+
+
+[[stage]]
+chkpt_file = 'RL.chkpt'
+
+termination = "simple"
+max_score = 1.0
+min_steps = 4
+max_steps = 10
+
+[stage.scoring]
+type = "custom_sum"
+parallel = true
+
+[[stage.scoring.component]]
+[stage.scoring.component.custom_alerts]
+
+[[stage.scoring.component.custom_alerts.endpoint]]
+name = "Custom alerts"
+weight = 1.0
+
+params.smarts = [
+    "[*;r8]",
+    "[*;r9]",
+    "[*;r10]",
+    "[*;r11]",
+    "[*;r12]",
+    "[*;r13]",
+    "[*;r14]",
+    "[*;r15]",
+    "[*;r16]",
+    "[*;r17]",
+    "[#8][#8]",
+    "[#6;+]",
+    "[#16][#16]",
+    "[#7;!n][S;!$(S(=O)=O)]",
+    "[#7;!n][#7;!n]",
+    "C#C",
+    "C(=[O,S])[O,S]",
+    "[#7;!n][C;!$(C(=[O,N])[N,O])][#16;!s]",
+    "[#7;!n][C;!$(C(=[O,N])[N,O])][#7;!n]",
+    "[#7;!n][C;!$(C(=[O,N])[N,O])][#8;!o]",
+    "[#8;!o][C;!$(C(=[O,N])[N,O])][#16;!s]",
+    "[#8;!o][C;!$(C(=[O,N])[N,O])][#8;!o]",
+    "[#16;!s][C;!$(C(=[O,N])[N,O])][#16;!s]"
+]
