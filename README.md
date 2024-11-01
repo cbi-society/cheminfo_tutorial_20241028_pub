@@ -45,6 +45,7 @@ The example put vina on /opt/vina but you can put vina any place.
 $ wget https://github.com/ccsb-scripps/AutoDock-Vina/releases/download/v1.2.5/vina_1.2.5_linux_x86_64
 $ sudo mkdir -p /opt/vina/bin/
 $ sudo mv vina_1.2.5_linux_x86_64 /opt/vina/bin
+$ sudo chmod a+x /opt/vina/bin/vina_1.2.5_linux_x86_64
 $ sudo ln -s /opt/vina/bin/vina_1.2.5_linux_x86_64 /opt/vina/bin/vina
 $ export PATH=/opt/vina/bin/:$PATH
 ```
@@ -150,7 +151,7 @@ $ git clone https://github.com/MolecularAI/REINVENT4.git
 $ cd REINVENT4
 $ conda create --name reinvent4 python=3.10
 $ conda activate reinvent4
-$ pip install torch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 --index-url https://download.pytorch.org/whl/rocm5.7
+$ pip install -r requirements-linux-64.lock
 $ pip install --no-deps .
 ```
 
@@ -162,6 +163,7 @@ The example put vina on /opt/vina but you can put vina any place.
 $ wget https://github.com/ccsb-scripps/AutoDock-Vina/releases/download/v1.2.5/vina_1.2.5_linux_x86_64
 $ sudo mkdir -p /opt/vina/bin/
 $ sudo mv vina_1.2.5_linux_x86_64 /opt/vina/bin
+$ sudo chmod a+x /opt/vina/bin/vina_1.2.5_linux_x86_64
 $ sudo ln -s /opt/vina/bin/vina_1.2.5_linux_x86_64 /opt/vina/bin/vina
 $ export PATH=/opt/vina/bin/:$PATH
 ```
@@ -212,7 +214,14 @@ $ conda install -c conda-forge jupyter
 - To run the code, XDG_CONFIG_HOME variable should be set and the directory should contain maize.toml which is modefied above procedure. The procedure is shown below.
 
 ```bash
-export XDG_CONFIG_HOME='{where your maize.toml placed}':$XDG_CONFIG_HOME
+export XDG_CONFIG_HOME="{where your maize.toml placed}":$XDG_CONFIG_HOME
+```
+
+### *IMPORTANT2* XDG_CONFIG_HOMEがうまく設定できない場合
+- setenv.py内の'{where your maize.toml placed}'をご自身のmaize.tomlをおいた絶対Pathに置き換え各ノートブックの一番最初に以下の一行を加えてください。
+
+```python
+import setenv
 ```
 
 ### Misc
