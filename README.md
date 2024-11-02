@@ -10,7 +10,7 @@
 
 - Basic skill of python programming
 - Basic knowledge of cheminfomratics
-- Unfortunately it's difficult to support Windows os. The code will be tested on Linux, Mac OS but not Windows(inculdes WSL).
+- Unfortunately it's difficult to support pure Windows os. The code will be tested on Linux, Mac OS and Windows WSL.
 
 ## Prerequreiment
 
@@ -33,9 +33,12 @@ $ git clone https://github.com/MolecularAI/REINVENT4.git
 $ cd REINVENT4
 $ conda create --name reinvent4 python=3.10
 $ conda activate reinvent4
-$ pip install torch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 --index-url https://download.pytorch.org/whl/rocm5.7
+$ pip install -r requirements-linux-64.lock
 $ pip install --no-deps .
 ```
+
+- _Optional_:
+  - if you want to use AMD GPUs please check original repo's [README](https://github.com/MolecularAI/REINVENT4/blob/main/README.md)
 
 #### Autodock Vina
 
@@ -200,10 +203,13 @@ $ conda install -c conda-forge jupyter
 - [Gypsum-DL](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-019-0358-3)
 - [Gypsum-DL Github](https://github.com/durrantlab/gypsum_dl)
 - [Maize-contrib](https://github.com/MolecularAI/maize-contrib)
+- [Navigating the Maize: Cyclic and conditional computational graphs for molecular simulation](https://arxiv.org/pdf/2402.10064)
+- [Computational chemistry workflows with Maize](https://ai-dd.eu/sites/default/files/slides/Thomas_Loehr-maize-talk.pdf)
+- [useful materials](https://ai-dd.eu/lectures)
 
-### *IMPORTANT* Pre-requirements
+### _IMPORTANT_ Pre-requirements
 
-- *./data以下にて配布しているxx_tmpl.tomlファイルはテンプレートファイルです。これを以下の手順に沿って各自の環境に書き換えて下さい。当日作業する場合、時間がかかりハンズオンについていけなくなる懸念があります。*
+- ./data以下にて配布しているxx_tmpl.tomlファイルはテンプレートファイルです。これを以下の手順に沿って各自の環境に書き換えて下さい。当日作業する場合、時間がかかりハンズオンについていけなくなる懸念があります。
 - Please modify following toml files before participating hands-on training
 - {put your environment here!} part should be changed as your own environment value.
 - modified files should be saved as name without '_tmpl'
@@ -217,8 +223,9 @@ $ conda install -c conda-forge jupyter
 export XDG_CONFIG_HOME="{where your maize.toml placed}":$XDG_CONFIG_HOME
 ```
 
-### *IMPORTANT2* XDG_CONFIG_HOMEがうまく設定できない場合
-- setenv.py内の'{where your maize.toml placed}'をご自身のmaize.tomlをおいた絶対Pathに置き換え各ノートブックの一番最初に以下の一行を加えてください。
+### _IMPORTANT2_ XDG_CONFIG_HOMEがうまく設定できない場合
+
+- setenv.py内の'{where your maize.toml placed}'をご自身のmaize.tomlをおいた絶対Pathに置き換え、各ノートブックの一番最初に以下の一行を加えてください。
 
 ```python
 import setenv
@@ -255,3 +262,10 @@ import setenv
 - Natsumi Miyano
 - Kazutoshi Takahashi
 - Takayuki Serizawa
+
+## 注意事項
+
+- 利用しているパッケージはいずれも更新が頻繁にかかります。本リポジトリはCBI学会2024年大会チュートリアル用に各パッケージをフォークし作成しました。
+- 今後フォーク元のコードの更新を継続的に追従し更新する保証はいたしません。
+- プロダクションにあたっては、オリジナルのリポジトリを利用し最新の環境を構築されることをお勧めいたします。
+- 本マテリアルに関する質問や、議論につきましてはIssue、Discussionに投稿してください。
