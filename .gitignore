@@ -162,7 +162,8 @@ cython_debug/
 #.idea/
 
 ###
-dock_res/*.sdf
+notebook/dock_res/*.sdf
+notebook/dock_res
 notebook/models/*.chkpt
 tb_TL/
 _sampling.json
